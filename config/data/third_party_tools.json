@@ -1,0 +1,14 @@
+[
+  {"id":"bcftools","kind":"cli","purpose":"VCF normalization, filtering and manipulation","required_for":"production genomic ingestion","install":"https://samtools.github.io/bcftools/"},
+  {"id":"tabix","kind":"cli","purpose":"indexed compressed VCF access","required_for":"production genomic ingestion","install":"https://www.htslib.org/"},
+  {"id":"samtools","kind":"cli","purpose":"BAM/CRAM inspection and QC","required_for":"sequencing file workflows","install":"https://www.htslib.org/"},
+  {"id":"vep","kind":"cli","purpose":"offline Ensembl Variant Effect Predictor","required_for":"high-throughput annotation","install":"https://www.ensembl.org/info/docs/tools/vep/index.html"},
+  {"id":"minimap2","kind":"cli","purpose":"sequence alignment","required_for":"optional sequence workflows","install":"https://github.com/lh3/minimap2"},
+  {"id":"snpeff","kind":"cli","purpose":"variant consequence annotation fallback","required_for":"optional annotation workflows","install":"https://pcingola.github.io/SnpEff/"},
+  {"id":"mlflow","kind":"service","purpose":"model registry and experiment tracking","required_for":"MLOps","install":"https://mlflow.org/"},
+  {"id":"minio","kind":"service","purpose":"S3-compatible genomic object storage","required_for":"production file storage","install":"https://min.io/"},
+  {"id":"redis","kind":"service","purpose":"queues/cache","required_for":"background workflows","install":"https://redis.io/"},
+  {"id":"temporal","kind":"service","purpose":"durable workflow orchestration","required_for":"long-running genomic analyses","install":"https://temporal.io/"},
+  {"id":"prometheus","kind":"service","purpose":"metrics","required_for":"production observability","install":"https://prometheus.io/"},
+  {"id":"grafana","kind":"service","purpose":"dashboards and alerting","required_for":"production observability","install":"https://grafana.com/"}
+]

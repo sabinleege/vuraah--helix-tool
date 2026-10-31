@@ -1,0 +1,14 @@
+[
+  {"id":"hpo-obo","kind":"ontology","name":"Human Phenotype Ontology OBO","url":"https://purl.obolibrary.org/obo/hp.obo","target":"data/external/hpo/hp.obo","required_for":["phenotype normalization","phenotype similarity"]},
+  {"id":"hpo-json","kind":"ontology","name":"Human Phenotype Ontology JSON","url":"https://purl.obolibrary.org/obo/hp.json","target":"data/external/hpo/hp.json","required_for":["phenotype normalization"]},
+  {"id":"clinvar","kind":"dataset","name":"NCBI ClinVar","url":"https://ftp.ncbi.nlm.nih.gov/pub/clinvar/","target":"data/external/clinvar/","required_for":["variant assertions","ACMG evidence","VUS reanalysis"],"download_method":"NCBI release directory; pin a release date"},
+  {"id":"ensembl","kind":"api","name":"Ensembl REST/VEP","url":"https://rest.ensembl.org/","target":"runtime API","required_for":["variant normalization","consequence annotation","HGVS recoding","AlphaMissense/Enformer VEP plugins"]},
+  {"id":"gnomad","kind":"api","name":"gnomAD","url":"https://gnomad.broadinstitute.org/api","target":"runtime API","required_for":["population allele frequencies"]},
+  {"id":"pubmed","kind":"api","name":"NCBI PubMed/PMC E-utilities","url":"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/","target":"runtime API","required_for":["literature retrieval"]},
+  {"id":"clinicaltrials","kind":"api","name":"ClinicalTrials.gov API v2","url":"https://clinicaltrials.gov/api/v2/","target":"runtime API","required_for":["trial ingestion","trial matching"]},
+  {"id":"clinpgx","kind":"api","name":"ClinPGx API","url":"https://api.pharmgkb.org/swagger/","target":"runtime API","required_for":["PGx clinical annotations","guidelines","drug labels"]},
+  {"id":"alphamissense","kind":"prediction_dataset","name":"AlphaMissense precomputed predictions","url":"https://github.com/google-deepmind/alphamissense","target":"data/external/alphamissense/","required_for":["missense effect scoring"],"note":"Trained weights are not released; use the published prediction data or Ensembl VEP integration."},
+  {"id":"evo2","kind":"model","name":"Arc Institute Evo 2 checkpoints","url":"https://huggingface.co/arcinstitute/evo2_7b","target":"model cache","required_for":["DNA sequence modeling"],"note":"Large GPU model; choose checkpoint based on hardware and license."},
+  {"id":"esm","kind":"model","name":"EvolutionaryScale ESM","url":"https://github.com/evolutionaryscale/esm","target":"model cache/API","required_for":["protein representation/effect modeling"],"note":"Selected model/API terms apply."},
+  {"id":"enformer","kind":"model","name":"DeepMind Enformer","url":"https://github.com/deepmind/deepmind-research","target":"model cache/API","required_for":["regulatory effect modeling"],"note":"Can be consumed via Ensembl VEP where supported."}
+]

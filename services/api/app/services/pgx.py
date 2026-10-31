@@ -1,0 +1,1 @@
+def interpret(diplotype,drug,guideline=None): return {'diplotype':diplotype,'drug':drug,'guideline':guideline,'requires_clinician_review':True,'recommendation':'External CPIC/PharmGKB evidence provider required.'}

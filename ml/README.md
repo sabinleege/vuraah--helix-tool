@@ -1,0 +1,1 @@
+Biological model adapters are fully wired at the domain boundary. Actual weights/runtime are external dependencies and are intentionally not redistributed. The API never pretends an unavailable model ran; the registry records adapter-ready/available state explicitly.
